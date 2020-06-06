@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ITW Global</title>
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/fontawesome.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="top-bar container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <button class="pull-right">Donate</button>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img src="assets/img/logo.png" alt="logo" /></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="/"><img src="assets/img/home.png" alt="logo" />Home</a></li>
+                    <li><a href="#"><img src="assets/img/video.png" alt="video" />Video</a></li>
+                    <li><a href="#"><img src="assets/img/audio.png" alt="audio" />Audio</a></li>
+                    <li><a href="#"><img src="assets/img/news.png" alt="news" />News</a></li>
+                    <li><a href="#"><img src="assets/img/prayer-requests.png" alt="prayer requests" />Prayer Requests</a></li>
+                    <li><a href="#"><img src="assets/img/languages.png" alt="language" />Language</a></li>
+                    <li><a href="#"><img src="assets/img/search.png" alt="logo" /></a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="homepage container">
+        <div class="bg"></div>
+        <div class="row">
+            <div class="col-xs-8">
+                <p class="subtitle">Dr. Michael Youssef</p>
+                <h1 class="title">Passionately Proclaiming Truth</h1>
+            </div>
+            <div class="col-xs-8 col-md-5">
+                <br />
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="col-xs-offset-2 col-md-offset-0 col-xs-8 col-md-2 play-btn">
+                <button><i class="fas fa-play"></i></button>
+                <p>Autoplay video</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-container">
+        <footer class="container-fluid">
+            <div class="row">
+                <!-- <div class="col-xs-12"> -->
+                    <ul class="links col-md-6 col-xs-12">
+                        <li>
+                            <a href="#">DMY Devotional</a>
+                        </li>
+                        <li>
+                            <a href="#">Prayer Requests</a>
+                        </li>
+                        <li>
+                            <a href="#">International Mailboxes</a>
+                        </li>
+                    </ul>
+                    <ul class="social-links col-md-6 col-xs-12">
+                        <li>
+                            <a href="#"><i class="far fa-paper-plane"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </li>
+                    </ul>
+                <!-- </div> -->
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // alert($('.top-bar').outerHeight())
+        // alert($('.navbar').outerHeight())
+        // alert($('footer').outerHeight())
+        $('.homepage').css('min-height', $(window).height() - $('.top-bar').outerHeight() - $('.navbar').outerHeight() - $('footer').outerHeight())
+        $('.bg').css('height', $('body').height() + 40)
+    </script>
+</body>
+
+</html>
