@@ -52,6 +52,9 @@ body, * {
     background-color: #003d7d;
     color: #fff;
 }
+.navbar-header .search {
+    padding: 10px;
+}
 .footer-container {
     margin-top: -20px;
 }
@@ -59,6 +62,7 @@ footer {
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
     background-color: rgba(27,27,27,0.7);
+    text-transform: uppercase;
 }
 footer .links, footer .social-links {
     padding: 15px 0 13px 0;
@@ -109,6 +113,9 @@ footer a, footer a:hover {
 .homepage .subtitle {
     margin-top: 80px;
     color: #fff;
+}
+.homepage .play-btn {
+    margin-bottom: 50px;
 }
 .homepage .play-btn button {
     padding: 17px 19px 13px 23px;
