@@ -2,6 +2,9 @@
 body, * {
     font-family: 'Montserrat', sans-serif;
 }
+.no-padding { 
+    padding: 0;
+}
 .top-bar, .navbar {
     z-index: 9;
 }
@@ -86,13 +89,7 @@ footer a, footer a:hover {
     color: #fff;
     text-decoration: none;
 }
-
-/* HOMEPAGE */
-.homepage {
-    color: #fff;
-}
-.homepage .bg {
-    background-image: url(../img/homepage-bg.jpg);
+.bg {
     position: absolute;
     top: 0;
     left: 0;
@@ -102,6 +99,30 @@ footer a, footer a:hover {
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
+}
+.floating-btns {
+    position: absolute;
+    top: 200px;
+    right: 0;
+}
+.floating-btns > button {
+    margin: 10px 0;
+    display: block;
+    background: transparent;
+    border: none;
+}
+.floating-btns > button img {
+    width: 40px;
+    border: 1px solid #003d7c;
+    border-radius: 50%;
+}
+
+/* HOMEPAGE */
+.homepage {
+    color: #fff;
+}
+.homepage .bg {
+    background-image: url(../img/homepage-bg.jpg);
 }
 .homepage .title {
     text-transform: uppercase;
@@ -133,8 +154,66 @@ footer a, footer a:hover {
     color: #fff;
 }
 
-
-
+/* CONTACT US */
+.contact-us .title {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 60px;
+}
+.contact-us .bg {
+    background-image: url(../img/contact-bg.jpg);
+}
+.contact-us form input, .contact-us form textarea {
+    background: #000;
+    border: none;
+    margin-top: 10px;
+}
+.contact-us form input {
+    margin: 10px 0;
+}
+.contact-us form input {
+    height: 37px;
+}
+.contact-us .disclaimer {
+    color: #fff;
+    margin-top: 10px;
+}
+.contact-us .submit-btn {
+    width: 100%;
+    box-shadow: none;
+    border: none;
+    border-radius: 3px;
+    background: #003d7c;
+    color: #fff;
+    height: 37px;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+.contact-us .social-icons {
+    padding: 15px 0 13px 0;
+    margin: 0;
+}
+.contact-us .social-icons li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 3px;
+    font-size: 18px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+.contact-us .social-icons li a {
+    color: #fff;
+}
+.contact-us .social-icons li a i.fa-facebook-f {
+    padding: 5px;
+}
+.contact-us .social-icons li a i.fa-instagram, .contact-us .social-icons li a i.fa-linkedin-in {
+    padding: 5px 3px;
+}
+.contact-us .social-icons li a i.fa-youtube {
+    padding: 5px 1px;
+}
 
 
 
@@ -168,5 +247,13 @@ footer a, footer a:hover {
     }
     .footer-container {
         margin-top: 0;
+    }
+    .contact-us .disclaimer {
+        margin-top: 40px;
+        text-align: center;
+    }
+    .contact-us .social-icons {
+        text-align: center;
+        margin-bottom: 20px;
     }
 }
