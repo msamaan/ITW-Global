@@ -47,7 +47,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="./index.html"><img src="assets/img/home.png" alt="logo" />Home</a></li>
                     <li><a href="#"><img src="assets/img/video.png" alt="video" />Video</a></li>
-                    <li><a href="#"><img src="assets/img/audio.png" alt="audio" />Audio</a></li>
+                    <li><a href="./audio.html"><img src="assets/img/audio.png" alt="audio" />Audio</a></li>
                     <li><a href="#"><img src="assets/img/news.png" alt="news" />News</a></li>
                     <li><a href="#"><img src="assets/img/prayer-requests.png" alt="prayer requests" />Prayer Requests</a></li>
                     <li><a href="#"><img src="assets/img/languages.png" alt="language" />Language</a></li>
@@ -65,7 +65,7 @@
         </button>
     </div>
 
-    <div class="contact-us container">
+    <div class="page-container contact-us container">
         <div class="bg"></div>
         <div class="row">
             <div class="col-xs-12">
@@ -118,7 +118,7 @@
                             <a href="#">International Mailboxes</a>
                         </li>
                         <li>
-                            <a href="#">Contact Us</a>
+                            <a href="./contact-us.html">Contact Us</a>
                         </li>
                     </ul>
                     <ul class="social-links col-md-6 col-xs-12">
@@ -147,10 +147,9 @@
     </div>
 
     <script>
-        // alert($('.top-bar').outerHeight())
-        // alert($('.navbar').outerHeight())
-        // alert($('footer').outerHeight())
-        $('.contact-us').css('min-height', $(window).height() - $('.top-bar').outerHeight() - $('.navbar').outerHeight() - $('footer').outerHeight())
+        console.log("$(document).height()", $(document).height())
+        console.log("$(window).height()", $(window).height())
+        $('.page-container').css('min-height', $(window).height() - $('.top-bar').outerHeight() - $('.navbar').outerHeight() - $('footer').outerHeight())
         $('.bg').css('height', $('body').height() + 40)
     </script>
 </body>
