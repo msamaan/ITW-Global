@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ITW Global</title>
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/fontawesome.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="top-bar container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <button class="pull-right">Donate</button>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="visible-xs pull-right search" href="#"><img src="assets/img/search.png" alt="search" /></a>
+                <a class="navbar-brand" href="./index.html"><img src="assets/img/logo.png" alt="logo" /></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="./index.html"><img src="assets/img/home.png" alt="logo" />Home</a></li>
+                    <li><a href="#"><img src="assets/img/video.png" alt="video" />Video</a></li>
+                    <li><a href="./audio.html"><img src="assets/img/audio.png" alt="audio" />Audio</a></li>
+                    <li><a href="#"><img src="assets/img/news.png" alt="news" />News</a></li>
+                    <li><a href="#"><img src="assets/img/prayer-requests.png" alt="prayer requests" />Prayer
+                            Requests</a></li>
+                    <li><a href="#"><img src="assets/img/languages.png" alt="language" />Language</a></li>
+                    <li class="hidden-xs"><a href="#"><img src="assets/img/search.png" alt="search" /></a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div class="floating-btns">
+        <button class="message">
+            <img src="assets/img/msg.png" alt="msg" />
+        </button>
+        <button class="phone">
+            <img src="assets/img/phone.png" alt="phone" />
+        </button>
+    </div>
+
+    <div class="page-container video container">
+        <div class="bg"></div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="video-container">
+                    <!-- Video -->
+                    <video id="video" width="640" height="365">
+                        <!-- <source src="videos/mikethefrog.webm" type="video/webm">
+                        <source src="videos/mikethefrog.ogv" type="video/ogv"> -->
+                        <source src="../ITW Global//assets/img/video demo.mp4" type="video/mp4">
+                        <!-- <p>
+                            Your browser doesn't support HTML5 video.
+                            <a href="videos/mikethefrog.mp4">Download</a> the video instead.
+                        </p> -->
+                    </video>
+                    <!-- Video Controls -->
+                    <div id="video-controls" class="video-controls">
+                        <button class="pull-left" type="button" id="backward"><i
+                                class="fas fa-step-backward"></i></button>
+                        <button class="pull-left" type="button" id="play-pause"><i class="fas fa-play"></i></button>
+                        <button class="pull-left" type="button" id="forward"><i
+                                class="fas fa-step-forward"></i></button>
+                        <p class="current-time pull-left">00 : 00</p>
+                        <input class="pull-left" type="range" id="seek-bar" value="0">
+                        <p class="duration pull-left">00 : 00</p>
+                        <button class="pull-right" type="button" id="full-screen"><i
+                                class="fas fa-compress"></i></button>
+                        <input class="pull-right hidden-xs" type="range" id="volume-bar" min="0" max="1" step="0.1" value="1">
+                        <button class="pull-right hidden-xs" type="button" id="mute"><i class="fas fa-volume-mute"></i></button>
+                        <button class="pull-right hidden-xs" type="button" id="language"><i class="fa fa-language"></i>
+                            <ul class="languages">
+                                <li>English</li>
+                                <li>Arabic</li>
+                                <li>Francaise</li>
+                            </ul>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-container">
+        <footer class="container-fluid">
+            <div class="row">
+                <!-- <div class="col-xs-12"> -->
+                <ul class="links col-md-6 col-xs-12">
+                    <li>
+                        <a href="#">DMY Devotional</a>
+                    </li>
+                    <li>
+                        <a href="#">International Mailboxes</a>
+                    </li>
+                    <li>
+                        <a href="./contact-us.html">Contact Us</a>
+                    </li>
+                </ul>
+                <ul class="social-links col-md-6 col-xs-12">
+                    <li>
+                        <a href="#"><i class="far fa-paper-plane"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </li>
+                </ul>
+                <!-- </div> -->
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        console.log("$(document).height()", $(document).height())
+        console.log("$(window).height()", $(window).height())
+        if ($(document).height() <= $(window).height()) {
+            $('.page-container').css('min-height', $(window).height() - $('.top-bar').outerHeight() - $('.navbar').outerHeight() - $('footer').outerHeight())
+        }
+        $('.bg').css('height', $('body').height() + 40)
+
+
+
+
+
+        window.onload = function () {
+
+            // Video
+            var video = document.getElementById("video");
+            $(".video-controls .duration").html(secondsToHms(video.duration));
+
+            // Buttons
+            var playButton = document.getElementById("play-pause");
+            var muteButton = document.getElementById("mute");
+            var fullScreenButton = document.getElementById("full-screen");
+
+            // Sliders
+            var seekBar = document.getElementById("seek-bar");
+            var volumeBar = document.getElementById("volume-bar");
+
+            // Languages
+            $("#language").click(function () {
+                $(".video-controls .languages").slideToggle();
+            })
+
+            // Event listener for the play/pause button
+            playButton.addEventListener("click", function () {
+                if (video.paused == true) {
+                    // Play the video
+                    video.play();
+
+                    // Update the button text to 'Pause'
+                    playButton.innerHTML = '<i class="fas fa-pause"></i>';
+                } else {
+                    // Pause the video
+                    video.pause();
+
+                    // Update the button text to 'Play'
+                    playButton.innerHTML = '<i class="fas fa-play"></i>';
+                }
+            });
+
+            // Event listener for the mute button
+            muteButton.addEventListener("click", function () {
+                if (video.muted == false) {
+                    // Mute the video
+                    video.muted = true;
+
+                    // Update the button text
+                    muteButton.innerHTML = '<i class="fas fa-volume-up"></i>';
+                } else {
+                    // Unmute the video
+                    video.muted = false;
+
+                    // Update the button text
+                    muteButton.innerHTML = '<i class="fas fa-volume-mute"></i>';
+                }
+            });
+
+            // Event listener for the full-screen button
+            fullScreenButton.addEventListener("click", function () {
+                if (video.requestFullscreen) {
+                    video.requestFullscreen();
+                } else if (video.mozRequestFullScreen) {
+                    video.mozRequestFullScreen(); // Firefox
+                } else if (video.webkitRequestFullscreen) {
+                    video.webkitRequestFullscreen(); // Chrome and Safari
+                }
+            });
+
+            // Event listener for the seek bar
+            seekBar.addEventListener("change", function () {
+                // Calculate the new time
+                var time = video.duration * (seekBar.value / 100);
+
+                // Update the video time
+                video.currentTime = time;
+            });
+
+            // Update the seek bar as the video plays
+            video.addEventListener("timeupdate", function () {
+                // Calculate the slider value
+                var value = (100 / video.duration) * video.currentTime;
+
+                // Update the slider value
+                seekBar.value = value;
+                $(".video-controls .current-time").html(secondsToHms(video.currentTime));
+            });
+
+            // Pause the video when the slider handle is being dragged
+            seekBar.addEventListener("mousedown", function () {
+                video.pause();
+            });
+
+            // Play the video when the slider handle is dropped
+            seekBar.addEventListener("mouseup", function () {
+                video.play();
+            });
+
+            // Event listener for the volume bar
+            volumeBar.addEventListener("change", function () {
+                // Update the video volume
+                video.volume = volumeBar.value;
+            });
+        }
+
+        function secondsToHms(d) {
+            d = Number(d);
+            var h = Math.floor(d / 3600);
+            var m = Math.floor(d % 3600 / 60);
+            var s = Math.floor(d % 3600 % 60);
+
+            var hDisplay = h > 0 ? (h < 10 ? "0" + h + " : " : h + " : ") : "";
+            var mDisplay = (m < 10 ? "0" + m + " : " : m + " : ");
+            var sDisplay = (s < 10 ? "0" + s : s);
+            return hDisplay + mDisplay + sDisplay;
+        }
+    </script>
+</body>
+
+</html>

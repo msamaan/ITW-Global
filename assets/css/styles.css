@@ -291,21 +291,11 @@ footer a, footer a:hover {
     width: 80%;
     margin: 0 auto;
 }
-audio {
+/* audio {
     filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
     width: 100%;
     height: 30px;
-}
-
-
-
-
-
-
-
-
-
-
+} */
 /* #audio_player, .info, .error, input {
     display: block;
     width: 427px;
@@ -475,6 +465,68 @@ input[type=range]::-webkit-slider-runnable-track {
 
 
 
+/* Video */
+.video .video-container {
+    margin: 40px 0;
+}
+.video video {
+    width: 100%;
+    border: 3px solid #003d7c;
+}
+.video input[type=range] {
+    margin: 25px 0;
+    width: 50%;
+}
+.video .video-controls {
+    position: absolute;
+    bottom: 48px;
+    left: 18px;
+    width: 97%;
+    background-image: linear-gradient(to bottom, transparent , black);
+}
+.video .video-controls button {
+    margin: 15px 10px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    outline: none;
+}
+button#language {
+    position: relative;
+}
+.video .video-controls > p {
+    color: #fff;
+    margin: 15px 10px;
+}
+.video .video-controls .languages {
+    position: absolute;
+    bottom: 15px;
+    list-style: none;
+    padding: 0;
+    margin-left: -38px;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 12px;
+    display: none;
+}
+.video .video-controls .languages li {
+    padding: 3px 15px;
+}
+.video .video-controls .languages li:first-child {
+    padding-top: 5px;
+}
+.video .video-controls .languages li:last-child {
+    padding-bottom: 5px;
+}
+.video .video-controls .languages li:hover {
+    background: #003d7c;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
 
 
 
@@ -495,6 +547,12 @@ input[type=range]::-webkit-slider-runnable-track {
         margin-right: -50px;
     }
 }
+
+@media (max-width: 1130px) {
+    .video .video-controls button, .video .video-controls > p {
+        margin: 15px 5px;
+    }
+}
 @media (max-width: 1024px) {
     progress {
         width: 40%;
@@ -503,6 +561,11 @@ input[type=range]::-webkit-slider-runnable-track {
 @media (max-width: 860px) {
     progress {
         width: 30%;
+    }
+}
+@media (max-width: 992px) {
+    .video input[type=range] {
+        width: 40%;;
     }
 }
 @media (max-width: 767px) {
@@ -543,5 +606,56 @@ input[type=range]::-webkit-slider-runnable-track {
     }
     #audio_player button.mute, #audio_player button.unmute {
         margin: 0 auto;
+    }
+    .video .video-controls {
+        width: 90%;
+    }
+    .video input[type=range] {
+        width: 30%;;
+    }
+    .video .video-controls > p {
+        font-size: 10px;
+        margin: 20px 5px;
+    }
+}
+@media screen and (max-width:64em) {
+    figure {
+       padding-left:0;
+       padding-right:0;
+       height:auto;
+    }
+ 
+    .controls {
+       height:1.876rem;
+    }
+}
+@media screen and (max-width:42.5em) {
+    .controls {
+       height:auto;
+    }
+ 
+    .controls > * {
+       display:block;
+       width:16.6667%;
+       margin-left:0;
+       height:2.5rem;
+       margin-top:2.5rem;
+    }
+ 
+    .controls .progress {
+       position:absolute;
+       top:0;
+       width:100%;
+       float:none;
+       margin-top:0;
+    }
+ 
+    .controls .progress progress {
+       width:98%;
+       margin:0 auto;
+    }
+ 
+    .controls button {
+       background-position:center center;
     }
 }
