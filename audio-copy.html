@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ITW Global</title>
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/fontawesome.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="top-bar container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <button class="pull-right">Donate</button>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="visible-xs pull-right search" href="#"><img src="assets/img/search.png" alt="search" /></a>
+                <a class="navbar-brand" href="./index.html"><img src="assets/img/logo.png" alt="logo" /></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="./index.html"><img src="assets/img/home.png" alt="logo" />Home</a></li>
+                    <li><a href="#"><img src="assets/img/video.png" alt="video" />Video</a></li>
+                    <li><a href="./audio.html"><img src="assets/img/audio.png" alt="audio" />Audio</a></li>
+                    <li><a href="#"><img src="assets/img/news.png" alt="news" />News</a></li>
+                    <li><a href="#"><img src="assets/img/prayer-requests.png" alt="prayer requests" />Prayer
+                            Requests</a></li>
+                    <li><a href="#"><img src="assets/img/languages.png" alt="language" />Language</a></li>
+                    <li class="hidden-xs"><a href="#"><img src="assets/img/search.png" alt="search" /></a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div class="floating-btns">
+        <button class="message">
+            <img src="assets/img/msg.png" alt="msg" />
+        </button>
+        <button class="phone">
+            <img src="assets/img/phone.png" alt="phone" />
+        </button>
+    </div>
+
+    <div class="page-container audio container">
+        <div class="bg"></div>
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="title center">Additional Audio Episodes</h1>
+                <h2 class="subtitle">Twelve Steps For Growing Up</h2>
+                <p class="subsubtitle">This in-depth study of the book of James will challenge you and encourage you to
+                    seek God and His wisdom as you mature in your walk with Him.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <!-- <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                </ol> -->
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="col-md-4 col-sm-6 col-xs-12 audio-player">
+                            <div class="audio-file">
+                                <div class="clearfix text">
+                                    <p class="col-xs-9">Twelve Steps for Growing Up-1</p>
+                                    <p class="col-xs-3 no-padding">15:00</p>
+                                </div>
+                                <div class="row buttons">
+                                    <button class="love"><i class="far fa-heart"></i></button>
+                                    <button class="share"><i class="fas fa-share-alt"></i></button>
+                                    <button class="add"><i class="fas fa-plus"></i></button>
+                                    <button class="play-pause" id="audio1" onclick='playPauseAudio();'><i
+                                            class="fas fa-play"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12 audio-player">
+                            <div class="audio-file">
+                                <div class="clearfix text">
+                                    <p class="col-xs-9">Twelve Steps for Growing Up-1</p>
+                                    <p class="col-xs-3 no-padding">15:00</p>
+                                </div>
+                                <div class="row buttons">
+                                    <button class="love"><i class="far fa-heart"></i></button>
+                                    <button class="share"><i class="fas fa-share-alt"></i></button>
+                                    <button class="add"><i class="fas fa-plus"></i></button>
+                                    <button class="play-pause" id="audio1" onclick="play('audio1')"><i
+                                            class="fas fa-play"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12 audio-player">
+                            <div class="audio-file">
+                                <div class="clearfix text">
+                                    <p class="col-xs-9">Twelve Steps for Growing Up-1</p>
+                                    <p class="col-xs-3 no-padding">15:00</p>
+                                </div>
+                                <div class="row buttons">
+                                    <button class="love"><i class="far fa-heart"></i></button>
+                                    <button class="share"><i class="fas fa-share-alt"></i></button>
+                                    <button class="add"><i class="fas fa-plus"></i></button>
+                                    <button class="play-pause" id="audio1" onclick="play('audio1')"><i
+                                            class="fas fa-play"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12 audio-player">
+                            <div class="audio-file">
+                                <div class="clearfix text">
+                                    <p class="col-xs-9">Twelve Steps for Growing Up-1</p>
+                                    <p class="col-xs-3 no-padding">15:00</p>
+                                </div>
+                                <div class="row buttons">
+                                    <button class="love"><i class="far fa-heart"></i></button>
+                                    <button class="share"><i class="fas fa-share-alt"></i></button>
+                                    <button class="add"><i class="fas fa-plus"></i></button>
+                                    <button class="play-pause" id="audio1" onclick="play('audio1')"><i
+                                            class="fas fa-play"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12 audio-player">
+                            <div class="audio-file">
+                                <div class="clearfix text">
+                                    <p class="col-xs-9">Twelve Steps for Growing Up-1</p>
+                                    <p class="col-xs-3 no-padding">15:00</p>
+                                </div>
+                                <div class="row buttons">
+                                    <button class="love"><i class="far fa-heart"></i></button>
+                                    <button class="share"><i class="fas fa-share-alt"></i></button>
+                                    <button class="add"><i class="fas fa-plus"></i></button>
+                                    <button class="play-pause" id="audio1" onclick="play('audio1')"><i
+                                            class="fas fa-play"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12 audio-player">
+                            <div class="audio-file">
+                                <div class="clearfix text">
+                                    <p class="col-xs-9">Twelve Steps for Growing Up-1</p>
+                                    <p class="col-xs-3 no-padding">15:00</p>
+                                </div>
+                                <div class="row buttons">
+                                    <button class="love"><i class="far fa-heart"></i></button>
+                                    <button class="share"><i class="fas fa-share-alt"></i></button>
+                                    <button class="add"><i class="fas fa-plus"></i></button>
+                                    <button class="play-pause" id="audio1" onclick="play('audio1')"><i
+                                            class="fas fa-play"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-md-4 col-sm-6 col-xs-12 audio-player">
+                            <div class="audio-file">
+                                <div class="clearfix text">
+                                    <p class="col-xs-9">Twelve Steps for Growing Up-1</p>
+                                    <p class="col-xs-3 no-padding">15:00</p>
+                                </div>
+                                <div class="row buttons">
+                                    <button class="love"><i class="far fa-heart"></i></button>
+                                    <button class="share"><i class="fas fa-share-alt"></i></button>
+                                    <button class="add"><i class="fas fa-plus"></i></button>
+                                    <button class="play-pause" id="audio1" onclick="play('audio1')"><i
+                                            class="fas fa-play"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12 audio-player">
+                            <div class="audio-file">
+                                <div class="clearfix text">
+                                    <p class="col-xs-9">Twelve Steps for Growing Up-1</p>
+                                    <p class="col-xs-3 no-padding">15:00</p>
+                                </div>
+                                <div class="row buttons">
+                                    <button class="love"><i class="far fa-heart"></i></button>
+                                    <button class="share"><i class="fas fa-share-alt"></i></button>
+                                    <button class="add"><i class="fas fa-plus"></i></button>
+                                    <button class="play-pause" id="audio1" onclick="play('audio1')"><i
+                                            class="fas fa-play"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12 audio-player">
+                            <div class="audio-file">
+                                <div class="clearfix text">
+                                    <p class="col-xs-9">Twelve Steps for Growing Up-1</p>
+                                    <p class="col-xs-3 no-padding">15:00</p>
+                                </div>
+                                <div class="row buttons">
+                                    <button class="love"><i class="far fa-heart"></i></button>
+                                    <button class="share"><i class="fas fa-share-alt"></i></button>
+                                    <button class="add"><i class="fas fa-plus"></i></button>
+                                    <button class="play-pause" id="audio1" onclick="play('audio1')"><i
+                                            class="fas fa-play"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12 audio-player">
+                            <div class="audio-file">
+                                <div class="clearfix text">
+                                    <p class="col-xs-9">Twelve Steps for Growing Up-1</p>
+                                    <p class="col-xs-3 no-padding">15:00</p>
+                                </div>
+                                <div class="row buttons">
+                                    <button class="love"><i class="far fa-heart"></i></button>
+                                    <button class="share"><i class="fas fa-share-alt"></i></button>
+                                    <button class="add"><i class="fas fa-plus"></i></button>
+                                    <button class="play-pause" id="audio1" onclick="play('audio1')"><i
+                                            class="fas fa-play"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12 audio-player">
+                            <div class="audio-file">
+                                <div class="clearfix text">
+                                    <p class="col-xs-9">Twelve Steps for Growing Up-1</p>
+                                    <p class="col-xs-3 no-padding">15:00</p>
+                                </div>
+                                <div class="row buttons">
+                                    <button class="love"><i class="far fa-heart"></i></button>
+                                    <button class="share"><i class="fas fa-share-alt"></i></button>
+                                    <button class="add"><i class="fas fa-plus"></i></button>
+                                    <button class="play-pause" id="audio1" onclick="play('audio1')"><i
+                                            class="fas fa-play"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12 audio-player">
+                            <div class="audio-file">
+                                <div class="clearfix text">
+                                    <p class="col-xs-9">Twelve Steps for Growing Up-1</p>
+                                    <p class="col-xs-3 no-padding">15:00</p>
+                                </div>
+                                <div class="row buttons">
+                                    <button class="love"><i class="far fa-heart"></i></button>
+                                    <button class="share"><i class="fas fa-share-alt"></i></button>
+                                    <button class="add"><i class="fas fa-plus"></i></button>
+                                    <button class="play-pause" id="audio1" onclick="play('audio1')"><i
+                                            class="fas fa-play"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-container">
+        <div class="container-fluid">
+            <div class="row">
+                <div id="audio_player">
+                    <p class="pull-left">Twelve Steps for Growing Up-1</p>
+                    <div class="love pull-left" onclick=""><i class="far fa-heart"></i></div>
+                    <button id='btnPlayPause' class='play' title='play' accesskey="P"
+                        onclick='playPauseAudio();'><i class="fas fa-play"></i></button>
+                    <!-- <button id='btnStop' class='stop' title='stop' accesskey="X" onclick='stopAudio();'>Stop</button> -->
+                    <progress id='progress-bar' min='0' max='100' value='0'>0% played</progress>
+                    <!-- <button id='btnReplay' class='replay' title='replay' accesskey="R" onclick='replayAudio();'>Replay</button> -->
+                    <input type="range" id="volume-bar" title="volume" min="0" max="10" step="1" value="10" class="pull-right">
+                    <button id='btnMute' class='mute pull-right' title='mute' onclick='muteVolume();'><i class="fas fa-volume-mute"></i></button>
+                </div>
+            </div>
+        </div>
+        <!-- <audio id="player">
+            <source src="https://file-examples.com/wp-content/uploads/2017/11/file_example_MP3_700KB.mp3"
+                type="audio/mp3">
+        </audio> -->
+        <audio id="music" src="https://file-examples.com/wp-content/uploads/2017/11/file_example_MP3_700KB.mp3"></audio>
+        <footer class="container-fluid">
+            <div class="row">
+                <!-- <div class="col-xs-12"> -->
+                <ul class="links col-md-6 col-xs-12">
+                    <li>
+                        <a href="#">DMY Devotional</a>
+                    </li>
+                    <li>
+                        <a href="#">International Mailboxes</a>
+                    </li>
+                    <li>
+                        <a href="./contact-us.html">Contact Us</a>
+                    </li>
+                </ul>
+                <ul class="social-links col-md-6 col-xs-12">
+                    <li>
+                        <a href="#"><i class="far fa-paper-plane"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </li>
+                </ul>
+                <!-- </div> -->
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        console.log("$(document).height()", $(document).height())
+        console.log("$(window).height()", $(window).height())
+        if ($(document).height() <= $(window).height()) {
+            $('.page-container').css('min-height', $(window).height() - $('.top-bar').outerHeight() - $('.navbar').outerHeight() - $('footer').outerHeight())
+        }
+        $('.bg').css('height', $('body').height() + 40)
+
+        function play(element_id) {
+            document.getElementById('player').play();
+            $('#' + element_id).attr("onclick", "pause('" + element_id + "')");
+            $('#' + element_id).html('<i class="fas fa-pause"></i>')
+        }
+
+        function pause(element_id) {
+            document.getElementById('player').pause();
+            $('#' + element_id).attr("onclick", "play('" + element_id + "')");
+            $('#' + element_id).html('<i class="fas fa-play"></i>')
+        }
+
+
+
+
+
+
+
+
+
+        var player = document.getElementById('music'); // id for audio element
+        var duration; // Duration of audio clip
+        btnPlayPause = document.getElementById('btnPlayPause');
+        btnMute = document.getElementById('btnMute');
+        progressBar = document.getElementById('progress-bar');
+        volumeBar = document.getElementById('volume-bar');
+        source = document.getElementById('audioSource');
+
+        // Update the video volume
+        volumeBar.addEventListener("change", function (evt) {
+            function displayMessage(message, canPlay) {
+                var element = document.querySelector('#message');
+                element.innerHTML = message;
+                element.className = canPlay ? 'info' : 'error';
+            }
+            player.volume = parseInt(evt.target.value) / 10;
+        });
+
+        // Add a listener for the timeupdate event so we can update the progress bar
+        player.addEventListener('timeupdate', updateProgressBar, false);
+
+        // Add a listener for the play and pause events so the buttons state can be updated
+        player.addEventListener('play', function () {
+            // Change the button to be a pause button
+            changeButtonType(btnPlayPause, 'pause', '<i class="fas fa-pause"></i>');
+        }, false);
+
+        player.addEventListener('pause', function () {
+            // Change the button to be a play button
+            changeButtonType(btnPlayPause, 'play', '<i class="fas fa-play"></i>');
+        }, false);
+
+        player.addEventListener('volumechange', function (e) {
+            // Update the button to be mute/unmute
+            if (player.muted) changeButtonType(btnMute, 'unmute', '<i class="fas fa-volume-up"></i>');
+            else changeButtonType(btnMute, 'mute', '<i class="fas fa-volume-mute"></i>');
+        }, false);
+
+        player.addEventListener('ended', function () { this.pause(); }, false);
+
+        progressBar.addEventListener("click", seek);
+
+        function seek(e) {
+            if (player.src) {
+                var percent = e.offsetX / this.offsetWidth;
+                player.currentTime = percent * player.duration;
+                e.target.value = Math.floor(percent / 100);
+                e.target.innerHTML = progressBar.value + '% played';
+            }
+        }
+
+        function playPauseAudio() {
+            console.log("player.src", player.src)
+            if (player.src) {
+                if (player.paused || player.ended) {
+                    // Change the button to a pause button
+                    changeButtonType(btnPlayPause, 'pause', '<i class="fas fa-pause"></i>');
+                    player.play();
+                }
+                else {
+                    // Change the button to a play button
+                    changeButtonType(btnPlayPause, 'play', '<i class="fas fa-play"></i>');
+                    player.pause();
+                }
+            }
+        }
+
+        // Stop the current media from playing, and return it to the start position
+        function stopAudio() {
+            if (player.src) {
+                player.pause();
+                if (player.currentTime) player.currentTime = 0;
+            }
+        }
+
+        // Toggles the media player's mute and unmute status
+        function muteVolume() {
+            if (player.src) {
+                if (player.muted) {
+                    // Change the button to a mute button
+                    changeButtonType(btnMute, 'mute', '<i class="fas fa-volume-mute"></i>');
+                    player.muted = false;
+                }
+                else {
+                    // Change the button to an unmute button
+                    changeButtonType(btnMute, 'unmute', '<i class="fas fa-volume-up"></i>');
+                    player.muted = true;
+                }
+            }
+        }
+
+        // Replays the media currently loaded in the player
+        // function replayAudio() {
+        //     if (player.src) {
+        //         resetPlayer();
+        //         player.play();
+        //     }
+        // }
+
+        // Update the progress bar
+        function updateProgressBar() {
+            // Work out how much of the media has played via the duration and currentTime parameters
+            var percentage = Math.floor((100 / player.duration) * player.currentTime);
+            // Update the progress bar's value
+            progressBar.value = percentage;
+            // Update the progress bar's text (for browsers that don't support the progress element)
+            progressBar.innerHTML = progressBar.title = percentage + '% played';
+        }
+
+        // Updates a button's title, innerHTML and CSS class
+        function changeButtonType(btn, value, text) {
+            btn.title = value;
+            btn.innerHTML = text;
+            btn.className = value;
+            if(value == 'mute' || value == 'unmute') {
+                btn.className = value + " pull-right";
+            }
+        }
+
+        function resetPlayer() {
+            progressBar.value = 0;
+            //clear the current song
+            player.src = '';
+            // Move the media back to the start
+            player.currentTime = 0;
+            // Set the play/pause button to 'play'
+            changeButtonType(btnPlayPause, 'play');
+        }
+
+        function displayMessage(message, canPlay) {
+            var element = document.querySelector('#message');
+            element.innerHTML = message;
+            element.className = canPlay ? 'info' : 'error';
+        }
+
+        function playSelectedFile(event) {
+            var file = this.files[0],
+                type = file.type,
+                canPlay = player.canPlayType(type),
+                message = 'Can play type "' + type
+                    + '": ' + (canPlay ? canPlay : 'no');
+            displayMessage(message, canPlay);
+
+            if (canPlay) player.src = URL.createObjectURL(file);
+            else resetPlayer();
+        }
+
+        var inputNode = document.querySelector('input');
+        inputNode.addEventListener('change', playSelectedFile, false);
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
