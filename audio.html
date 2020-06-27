@@ -13,7 +13,7 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/fontawesome.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
@@ -291,13 +291,19 @@
                 <div id="audio_player">
                     <p class="pull-left">Twelve Steps for Growing Up-1</p>
                     <div class="love pull-left" onclick=""><i class="far fa-heart"></i></div>
-                    <button id='btnPlayPause' class='play' title='play' accesskey="P"
+                    <button class="pull-left" type="button" id="backward"><i class="fas fa-step-backward"></i></button>
+                    <button id='btnPlayPause' class='play pull-left' title='play' accesskey="P"
                         onclick='playPauseAudio();'><i class="fas fa-play"></i></button>
+                    <button class="pull-left" type="button" id="forward"><i class="fas fa-step-forward"></i></button>
                     <!-- <button id='btnStop' class='stop' title='stop' accesskey="X" onclick='stopAudio();'>Stop</button> -->
-                    <progress id='progress-bar' min='0' max='100' value='0'>0% played</progress>
+                    <p class="current-time pull-left hidden-xs hidden-sm">00 : 00</p>
+                    <progress class="pull-left" id='progress-bar' min='0' max='100' value='0'>0% played</progress>
+                    <p class="duration pull-left hidden-xs hidden-sm">00 : 00</p>
                     <!-- <button id='btnReplay' class='replay' title='replay' accesskey="R" onclick='replayAudio();'>Replay</button> -->
-                    <input type="range" id="volume-bar" title="volume" min="0" max="10" step="1" value="10" class="pull-right">
-                    <button id='btnMute' class='mute pull-right' title='mute' onclick='muteVolume();'><i class="fas fa-volume-mute"></i></button>
+                    <input type="range" id="volume-bar" title="volume" min="0" max="10" step="1" value="10"
+                        class="pull-right">
+                    <button id='btnMute' class='mute pull-right pull-right' title='mute' onclick='muteVolume();'><i
+                            class="fas fa-volume-mute"></i></button>
                 </div>
             </div>
         </div>
@@ -397,12 +403,12 @@
         // Add a listener for the play and pause events so the buttons state can be updated
         player.addEventListener('play', function () {
             // Change the button to be a pause button
-            changeButtonType(btnPlayPause, 'pause', '<i class="fas fa-pause"></i>');
+            changeButtonType(btnPlayPause, 'pause pull-left', '<i class="fas fa-pause"></i>');
         }, false);
 
         player.addEventListener('pause', function () {
             // Change the button to be a play button
-            changeButtonType(btnPlayPause, 'play', '<i class="fas fa-play"></i>');
+            changeButtonType(btnPlayPause, 'play pull-left', '<i class="fas fa-play"></i>');
         }, false);
 
         player.addEventListener('volumechange', function (e) {
@@ -429,12 +435,12 @@
             if (player.src) {
                 if (player.paused || player.ended) {
                     // Change the button to a pause button
-                    changeButtonType(btnPlayPause, 'pause', '<i class="fas fa-pause"></i>');
+                    changeButtonType(btnPlayPause, 'pause pull-left', '<i class="fas fa-pause"></i>');
                     player.play();
                 }
                 else {
                     // Change the button to a play button
-                    changeButtonType(btnPlayPause, 'play', '<i class="fas fa-play"></i>');
+                    changeButtonType(btnPlayPause, 'play pull-left', '<i class="fas fa-play"></i>');
                     player.pause();
                 }
             }
@@ -480,6 +486,8 @@
             progressBar.value = percentage;
             // Update the progress bar's text (for browsers that don't support the progress element)
             progressBar.innerHTML = progressBar.title = percentage + '% played';
+
+            $("#audio_player .current-time").html(secondsToHms(player.currentTime));
         }
 
         // Updates a button's title, innerHTML and CSS class
@@ -487,7 +495,7 @@
             btn.title = value;
             btn.innerHTML = text;
             btn.className = value;
-            if(value == 'mute' || value == 'unmute') {
+            if (value == 'mute' || value == 'unmute') {
                 btn.className = value + " pull-right";
             }
         }
@@ -499,7 +507,7 @@
             // Move the media back to the start
             player.currentTime = 0;
             // Set the play/pause button to 'play'
-            changeButtonType(btnPlayPause, 'play');
+            changeButtonType(btnPlayPause, 'play pull-left');
         }
 
         function displayMessage(message, canPlay) {
@@ -523,10 +531,22 @@
         var inputNode = document.querySelector('input');
         inputNode.addEventListener('change', playSelectedFile, false);
 
+        function secondsToHms(d) {
+            d = Number(d);
+            var h = Math.floor(d / 3600);
+            var m = Math.floor(d % 3600 / 60);
+            var s = Math.floor(d % 3600 % 60);
 
+            var hDisplay = h > 0 ? (h < 10 ? "0" + h + " : " : h + " : ") : "";
+            var mDisplay = (m < 10 ? "0" + m + " : " : m + " : ");
+            var sDisplay = (s < 10 ? "0" + s : s);
+            return hDisplay + mDisplay + sDisplay;
+        }
 
-
-
+        window.onload = function () {
+            var overall_duration = secondsToHms(player.duration);
+            $("#audio_player .duration").html(overall_duration);
+        }
 
 
 
